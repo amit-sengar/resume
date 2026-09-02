@@ -1,0 +1,163 @@
+# Résumé content — edit this file, then run `python3 build.py`.
+# Plain text only; HTML special characters are escaped automatically.
+
+name: Amit Singh
+headline: Senior Software Engineer · SDE-3
+pdf_filename: Amit-Singh-Senior-Software-Engineer-Resume.pdf
+
+meta:
+  description: >-
+    Amit Singh — Senior Software Engineer (SDE-3) building distributed backend
+    systems in Go and Java / Spring Boot across FinTech, banking and Ed-Tech.
+
+contact:
+  # `private: true` items appear only in the private PDF (out/), never on the
+  # public web page or the public PDF.
+  - text: +91 98911 93704
+    private: true
+  - text: sengar.amit1502@gmail.com
+    url: mailto:sengar.amit1502@gmail.com
+  - text: linkedin.com/in/sengar-amit
+    url: https://www.linkedin.com/in/sengar-amit
+  - text: github.com/amit-sengar
+    url: https://github.com/amit-sengar
+  - text: Bengaluru, India
+
+summary: >-
+  Senior Software Engineer with 7 years building distributed backend systems
+  in Go and Java / Spring Boot at Tekenlight Solutions, across FinTech, banking
+  and multi-tenant Ed-Tech. 5+ years of production Go on a mobile banking
+  platform: built shared security infrastructure — ECDSA/RSA payload signing
+  with a centralized gRPC key registry, JWT (RS512) and multi-provider OAuth2
+  verification, PII-safe audit logging — and led a zero-downtime Visa-to-Mastercard
+  network migration. In Java, architected an ed-tech platform serving 10K+ daily
+  active users, with a data-driven rule engine for per-school workflows,
+  AI-backed semantic search and a self-hosted OTA update service. Leads
+  engineering teams of 10 and 8 across the two products.
+
+skills:
+  - category: Languages
+    items: [Java, Go / Golang, Python, Dart (Flutter), SQL]
+  - category: Frameworks
+    items: [Spring Boot, Spring MVC, Spring Security, Spring Data JPA, Hibernate, gRPC, FastAPI]
+  - category: Data Stores
+    items: [PostgreSQL, Redis, HBase, Hive, Elasticsearch, Milvus]
+  - category: Data Pipelines
+    items: [Hadoop, Apache Airflow]
+  - category: AI / LLM
+    items: [MCP (Model Context Protocol), Claude, OpenAI, Ollama, LiteLLM, RAG pipelines, prompt engineering, tool orchestration]
+  - category: Cloud & DevOps
+    items: [Azure, Firebase, Docker, CI/CD pipelines, Git]
+  - category: Architecture
+    items: [Microservices, Event-Driven Architecture, Distributed Systems, Rule Engine & Workflow Configuration, Multi-Tenant SaaS, Modular / Layered Design, Distributed Caching, Real-Time Data Processing]
+  - category: Security
+    items: [ECDSA (P-256/SHA-256) & RSA (PKCS1v15) signing, PEM/PKCS8 key parsing, centralized key registry (gRPC), JWT (RS512), OAuth2, SSO, RBAC, field-level PII encryption]
+
+experience:
+  - company: Tekenlight Solutions Pvt Ltd
+    location: Bengaluru, India
+    dates: 2019 — Present
+    titles:
+      - title: Senior Software Engineer
+        dates: 2023 — Present
+      - title: Software Engineer
+        dates: 2019 — 2023
+    projects:
+      - name: Ed-Tech Web Application
+        stack: Java, Spring Boot, PostgreSQL, Milvus, Python
+        dates: 2024 — Present
+        bullets:
+          - >-
+            Architected and led backend development of an AI-enabled, multi-tenant
+            ed-tech platform on Java, Spring Boot and PostgreSQL, serving 10K+ daily
+            active users with high-volume, real-time data flows across teachers,
+            school administrators, students and parents.
+          - >-
+            Designed a configurable, data-driven rule engine that lets each school
+            define its own workflows — approvals, escalations, notifications, grading
+            and eligibility policies — without code changes, turning a single-tenant
+            application into an extensible multi-tenant platform.
+          - >-
+            Built AI-backed semantic content search that lets teachers and students
+            find learning material by meaning rather than keywords — embeddings
+            indexed in Milvus, served by a Python FastAPI service with LiteLLM as the
+            model-provider layer, alongside Elasticsearch.
+          - >-
+            Built a self-hosted mobile over-the-air (OTA) update service in Java
+            implementing the Expo Updates v1 protocol end to end — signed multipart
+            manifests, RSA code signing via Azure Key Vault, remote rollback,
+            Redis-cached delivery — replacing a paid third-party service and letting
+            the team ship new features the same day, bypassing App Store and Google
+            Play review cycles.
+          - >-
+            Designed a modular backend architecture on reusable frameworks, raising
+            release frequency from biweekly to weekly — including an annotation-driven
+            generic CRUD framework that removed ~40% of boilerplate service code
+            across 15+ modules and standardized data access.
+          - >-
+            Engineered a pluggable multi-layer caching framework (in-memory + Redis)
+            that cut average database read latency ~45% under peak load.
+          - >-
+            Made the platform PII-compliant with application-layer field-level
+            encryption — key rotation and transparent encrypt/decrypt at the
+            persistence boundary — and secured access with SSO and fine-grained RBAC
+            on Spring Security.
+          - >-
+            Led a cross-functional team of 10 engineers — sprint planning, code
+            reviews, mentorship — and cut new-hire onboarding time by ~30%.
+
+      - name: FinTech Mobile Banking Application
+        stack: Golang, gRPC, Flutter
+        dates: 2021 — Present
+        bullets:
+          - >-
+            Led the business-driven migration of the card payment backend from Visa
+            to Mastercard — card issuance, transaction routing, settlement flows and
+            compliance hooks — with zero downtime and no customer-facing disruption.
+          - >-
+            Architected the Golang microservices backend with custom authentication,
+            structured logging and connection pooling, improving throughput ~35% over
+            the legacy monolithic service.
+          - >-
+            Built a shared Go cryptographic signing library adopted by the Ledger,
+            KYC, RTP and RTAC modules — ECDSA (P-256/SHA-256) and RSA (PKCS1v15)
+            payload signing, PEM/PKCS8 key parsing, and a centralized gRPC key
+            registry with per-domain key isolation and a secure file-based fallback.
+          - >-
+            Engineered JWT (RS512) issuance and multi-provider OAuth2 verification
+            middleware supporting Firebase, Azure AD, custom OAuth and anonymous
+            sessions, unifying authentication across all platform services.
+          - >-
+            Designed a Go audit-logging middleware with correlation-ID request
+            tracing, PII-safe field sanitization and complete request/response audit
+            trails to meet compliance requirements.
+          - >-
+            Delivered debit card applications, fund transfers and Apple Pay /
+            Google Pay integration in the Flutter mobile app, handling
+            high-frequency transaction data in real time.
+          - >-
+            Led an 8-person backend and mobile team, introducing modular framework
+            patterns that reduced technical debt and enabled parallel feature
+            development; critical services sustained a 99.9% uptime SLA.
+
+      - name: Banking Solutions — Financial Reporting System
+        stack: Java, Spring Boot, Hadoop, HBase, Airflow
+        dates: 2019 — 2021
+        bullets:
+          - >-
+            Developed Java Spring Boot REST APIs for automated financial report
+            generation in BAI2, CAMT052 and CAMT053 formats for a banking client's
+            compliance reporting pipeline.
+          - >-
+            Orchestrated data ingestion from the bank's data lake into Hadoop with
+            Apache Airflow, enabling reliable daily batch processing of machine- and
+            human-readable reports.
+          - >-
+            Selected HBase over Hive for random-access report reads, reducing p99
+            query latency from ~800 ms to ~120 ms at 2M+ daily rows; containerized
+            services with Docker for scalable deployment.
+
+education:
+  - degree: B.Tech, Mechanical Engineering
+    institution: Raj Kumar Goel Institute of Technology (A.K.T.U)
+    dates: "2017"
